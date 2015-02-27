@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @new_south.title %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @new_south.notes %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @new_south.due %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @new_south.done %>
+</p>
+
+<%= link_to 'Edit', edit_new_south_path(@new_south) %> |
+<%= link_to 'Back', new_souths_path %>

@@ -1,0 +1,31 @@
+<h1>Listing new_souths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th>Due</th>
+      <th>Done</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_souths.each do |new_south| %>
+      <tr>
+        <td><%= new_south.title %></td>
+        <td><%= new_south.notes %></td>
+        <td><%= new_south.due %></td>
+        <td><%= new_south.done %></td>
+        <td><%= link_to 'Show', new_south %></td>
+        <td><%= link_to 'Edit', edit_new_south_path(new_south) %></td>
+        <td><%= link_to 'Destroy', new_south, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New south', new_new_south_path %>
